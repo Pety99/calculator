@@ -1,0 +1,116 @@
+:root {
+    --wrapperWidth: min(max(calc(40vw), 300px), 500px);
+    --gutter: 10px;
+    --noOfColumns: 4;
+    --ratioA: 1;
+    --ratioB: 1;
+    --rowHeight: calc((var(--wrapperWidth) - (3 * var(--gutter))) / 4);
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.35;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    color: #3c3c3d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    font-family: "Quicksand", sans-serif;
+}
+
+button {
+    font-size: calc(var(--wrapperWidth) * 0.05);
+    border-radius: 15px;
+    outline: none;
+    padding: 1em;
+}
+
+.grid {
+    margin: auto;
+    width: var(--wrapperWidth);
+    height: var(--wrapperWidth);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: var(--rowHeight);
+    gap: var(--gutter);
+}
+
+.double {
+    grid-column: span 2;
+}
+
+.input {
+    width: calc(var(--wrapperWidth) - 0.5em);
+    text-align: right;
+    right: 2em;
+    padding-right: 0.5em;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3c3c3d;
+}
+
+.result {
+    line-height: 0px;
+    margin-bottom: 2em;
+}
+
+.history {
+    font-size: 25px;
+}
+
+.item {
+    border-radius: 30%;
+    border: none;
+    background-color: #AFAFAF;
+    background-color: hsl(202, 33%, 94%);
+    color: #3c3c3d;
+    transition: 0.17s;
+}
+
+.item:active {
+    background-color: hsl(202, 3%, 84%);
+    font-size: 30px;
+}
+
+.item:hover{
+    cursor:pointer;
+}
+
+.other {
+    color: white;
+}
+
+.operator {
+    background-color: hsl(35, 100%, 50%);
+    color: white;
+}
+
+.operator:active {
+    background-color: hsl(35, 100%, 40%);
+}
+
+.double {
+    border-radius: 15%/30%;
+}
+
+.C {
+    background-color: rgba(255, 0, 50, 10%);
+    color: rgb(255, 40, 0);
+}
+
+.X path {
+    fill: rgb(255, 40, 0);
+    max-width: 1em;
+    max-height: 1em;
+}
+
+.EQ {
+    background-color: hsl(147, 63%, 48%)
+}
+
+.EQ:active {
+    background-color: hsl(147, 63%, 38%)
+}

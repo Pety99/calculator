@@ -11,7 +11,7 @@ function sum(nums) {
     return nums.reduce((total, num) => total + num, 0);
 }
 
-function multiply(nums) {
+function multiply(a, b) {
     return a * b;
 }
 
